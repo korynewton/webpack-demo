@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/korynewton/webpack-demo#readme",
   "devDependencies": {
+    "css-loader": "^3.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6"
   }
