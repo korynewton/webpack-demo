@@ -1,12 +1,11 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  //   devtool: 'none',
   entry: './src/index.js',
-  output: {
-    filename: 'main .js',
-    path: path.resolve(__dirname, 'dist')
+  entry: {
+    main: './src/index.js',
+    vendor: './src/vendor.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -24,7 +23,7 @@ module.exports = {
         use: ['html-loader']
       },
       {
-        test: /\.(svg|png|gif|jpg)$/,
+        test: /\.(svg|png|jpg|gif)$/,
         use: {
           loader: 'file-loader',
           options: {
